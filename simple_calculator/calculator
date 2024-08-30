@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        #one{
+            position: absolute;
+            width: 200px;
+            height: 40px;
+            border-radius: 10px;
+            margin-left: 350px;
+            text-align: center;
+            margin-top: -100px;
+            box-shadow: 2px 2px 2px;
+        }
+        #two{
+            position: absolute;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin-left: 650px;
+            margin-top: -100px;
+            box-shadow:2px 2px 2px ;   
+        }
+        #result{
+            position: absolute;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin-left: 500px;
+            margin-top: -50px;
+            box-shadow:2px 2px 2px ; 
+        }
+        #all{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 200px;
+            margin-left: 500px;
+            margin-top: 160px;
+        }
+        #n{
+            border-radius: 10px;
+            width: 200px;
+            height: 30px;
+            box-shadow: 2px 2px 2px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="one" placeholder=" Enter the first data">
+        <input type="text" id="two" placeholder=" Enter the second data">
+        <input type="text" id="result" placeholder=" Result">
+        <div id="all">
+        <input id="n" type="button" value="add" onclick="cal(this)">
+        <input id="n" type="button" value="sub" onclick="cal(this)">
+        <input id="n" type="button" value="mul" onclick="cal(this)">
+        <input id="n" type="button" value="div" onclick="cal(this)">
+        <input id="n" type="button" value="mod" onclick="cal(this)">
+        </div>
+
+    </div>
+    
+    <script>
+        function cal(g){
+            let a =parseInt(document.getElementById("one").value);
+            let b =parseInt(document.getElementById("two").value);
+            let c = document.getElementById("result");
+           
+             if (g.value =="add"){
+                c.value = a+b;
+             }
+             else if(g.value=="sub"){
+                c.value = a-b;
+             }
+             else if(g.value=="mul"){
+                c.value = a*b;
+             }
+             else if(g.value=="div"){
+                c.value = a/b;
+             }
+             else if(g.value=="mod"){
+                c.value = a%b;
+             }
+        }
+
+    </script>
+</body>
+</html>
