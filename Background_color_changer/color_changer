@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+           margin-top: 250px;
+           margin-left: 650px;
+           background-color: black;
+           color: whitesmoke;
+        }
+        button:hover{
+            cursor: pointer;
+            font-size: xx-large;
+            box-shadow: 12px 10px 10px 6px ;
+            font-style: oblique;
+            font-weight: lighter;
+            text-decoration: underline;
+            text-transform: capitalize;
+        } 
+    </style>
+</head>
+<body id="colorBox">
+    
+    <div>
+        <button onclick="changeColor()">Click here to Change color</button>
+    </div>
+
+
+    <script>
+      function changeColor() {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+
+  const color = `rgb(${r}, ${g}, ${b})`;
+
+  document.getElementById('colorBox').style.backgroundColor = color;
+}
+
+    </script>
+</body>
+</html>
